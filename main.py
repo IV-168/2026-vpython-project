@@ -1,7 +1,7 @@
 Web VPython 3.2
 import random
 bullets = []
-remainingbullets = 168000000000
+remainingbullets = 18
 
 #  일단 총부터 먼저 제작해야함. 
 tp = box(color = vec(0.3,0.3,0.3), size = vec(8,1.01,1.01))
@@ -14,7 +14,7 @@ trigger = box(color = vec(0.15,0.15,0.15), size = vec(0.5,0.25,0.25), pos = vec(
 trigger.rotate(angle = radians(135), axis=vec(0,0,1))
 grip.rotate(angle = radians(345), axis=vec(0,0,1))
 
-# 할 짓거리가 없어서 총알 개수 표시나 만들자 지금 세준이 자네 그냥
+# 할 짓거리가 없으니 총알 개수 표시나 만들자
 Maritchidaksukii = label(pos = vector(5, 5, 5), text = f'Bullets: {remainingbullets}', box = False, height = 16)
 
 # 이제 총 모양 다 잡았으니 총알 발사 ㄱㄱ
@@ -37,5 +37,4 @@ while True:
         
     for i in bullets:
         i.pos.x = i.pos.x + random.uniform(0.8,1)
-        
         
